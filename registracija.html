@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-shop mobiteli</title>
+    <!-- link rel="stylesheet" href="../css/stil.css" -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+
+</head>
+
+<body>
+    <div class="w3-container">
+        <nav class="navigacija" id="navigacija">
+            <div class="w3-bar w3-black">
+                <a href="index.html" class="w3-bar-item w3-button">Početna stranica</a>
+                <a href="sve_ponude.html" class="w3-bar-item w3-button">Sve ponude</a>
+                <a href="" class="w3-bar-item w3-button">Kontakt</a>
+                <a href="registracija.html" class="w3-bar-item w3-button">Registracija</a>
+            </div>               
+        </nav>
+    </div>
+    <div class="w3-container">
+    <h1>Web shop - mobiteli</h1>    
+
+        <h2>Registracija</h2>
+        
+    <div class="w3-container">
+    <div class="w3-card-4">
+        <div>
+            <label for="">Ime:</label> 
+            <input id="ime" type="text" />
+        </div>
+        <div>
+            <label for="">Prezime:</label>
+            <input id="prezime" type="text" />
+        </div>
+        <div>
+            <label for="">Email:</label> 
+            <input id="email" type="text" />
+        </div>
+        <div>
+            <label for="">Lozinka:</label>
+            <input id="lozinka" type="password" />
+        </div>
+        <div>
+            <input type="submit" value="Potvrdi" 
+            onclick="spremiPodatke()" />
+        </div>
+          <h3>   Uneseni podaci su:  </h3>
+          <div id="podaci"></div>
+          <script>
+            function spremiPodatke(){ 
+                let ime= document.getElementById("ime").value;
+                let prezime = document.getElementById("prezime").value;
+                let email = document.getElementById("email").value;
+                let lozinka = document.getElementById("lozinka").value;
+                let divElemPodaci = document.getElementById("podaci");
+                let divElemIme = document.createElement("DIV");
+                let tekstIme= document.createTextNode("Ime: "+ime);
+                let divElemPrezime = document.createElement("DIV");
+                let tekstPrezime= document.createTextNode("Prezime: "+prezime);
+                let divElemEmail = document.createElement("DIV");
+                let tekstEmail= document.createTextNode("Email: "+email);
+                divElemPodaci.appendChild(divElemIme);
+                divElemIme.appendChild(tekstIme);
+                divElemPodaci.appendChild(divElemPrezime);
+                divElemPrezime.appendChild(tekstPrezime);
+                divElemPodaci.appendChild(divElemEmail);
+                divElemEmail.appendChild(tekstEmail);
+            }
+          </script>
+        
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
+
